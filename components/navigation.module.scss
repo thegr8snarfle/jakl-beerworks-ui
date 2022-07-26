@@ -1,0 +1,44 @@
+@import "../styles/_colors";
+@import "../styles/_mixins.scss";
+
+.navbar {
+  background: $black;
+  padding: 0;
+  border-top: 3px solid $gray;
+  border-bottom: 3px solid $gray;
+
+  @include large-device {
+    background: transparent;
+    border: none;
+    color: $gray;
+  }
+
+}
+
+ .brandImage {
+  background: #ffffff;
+  border: none;
+  max-height: 100px;
+  left: 22px;
+  top: -29px;
+}
+
+.navbarToggler {
+  outline: none;
+  &-icon {
+    fill: #ffffff;
+  }
+}
+
+
+.navLink {
+  color: #ea5e10;
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 20px;
+
+  &:hover {
+    color: $gray;
+  }
+}

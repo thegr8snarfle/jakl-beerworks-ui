@@ -1,0 +1,13 @@
+@import "./_colors";
+
+// navigation
+$nav-link-color: $orange;
+$nav-link-hover-color: $orange;
+
+$font-family-base: 'Noto Sans', sans-serif;
+
+$primary: $gray;
+$secondary: $orange;
+$dark: $black;
+
+@import "bootstrap/scss/bootstrap";

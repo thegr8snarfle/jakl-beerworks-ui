@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../assets/font/NotoSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../assets/font/NotoSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+html {
+
+  body {
+    background: url("../assets/image/bg-slate-gradient.jpeg") no-repeat;
+    background-size: cover;
+    color: white;
+  }
+}
+
+@import "./_bootstrap";
+@import "./_mixins";
