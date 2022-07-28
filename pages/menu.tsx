@@ -6,26 +6,30 @@ import {Item} from "../api/untappd.model";
 import Beverage from "../components/Beverage";
 
 const MenuPage: NextPageWithLayout = () => {
-  // const menuItems: Item[] = [];
-  // async beforeMount(): Promise<void> {
-  //   this.menuItems = await untappdAPI.fetchMenuItems();
-  // }
+
   const [ menuItems, setMenuItems ] = useState<Item[]>();
+
   useEffect(() => {
     untappdAPI.fetchMenuItems().then(data => setMenuItems(data));
   }, []);
 
   return (
-    <Container className="menu-container fluid overflow-scroll">
-      <Row>
-        <Col>
-          <h2 className="text-secondary border-bottom border-5 border-secondary pb-3 px-4">Menu</h2>
-          {
-            menuItems && menuItems?.map(item => <Beverage bevvy={item} key={item.id} />)
-          }
-        </Col>
-      </Row>
-    </Container>
+    <>
+      <h2 className="text-secondary border-bottom border-5 border-secondary py-3 px-3 mb-4">Menu</h2>
+      {
+        menuItems && menuItems?.map(item => <Beverage bevvy={item} key={item.id} />)
+      }
+      </>
+    // <Container className="fluid overflow-scroll">
+    //   <Row>
+    //     <Col>
+    //       <h2 className="text-secondary border-bottom border-5 border-secondary py-3 px-3 mb-4">Menu</h2>
+    //       {
+    //         menuItems && menuItems?.map(item => <Beverage bevvy={item} key={item.id} />)
+    //       }
+    //     </Col>
+    //   </Row>
+    // </Container>
   )
 }
 

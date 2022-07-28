@@ -15,25 +15,25 @@ const Navigation = () => {
                  className={`${styles.brandImage} img-thumbnail rounded-circle position-absolute mt-2  d-none d-lg-block`}/>
         </Navbar.Brand>
         <Navbar.Toggle className="border-0 text-primary">
-          <Icon name="bars" size='lg' />
+          <Icon name="bars" size='lg' className="btn-outline-none"/>
         </Navbar.Toggle>
         <Navbar.Collapse id="nav-collapse" className="justify-content-end">
-          <Nav className="w-100 justify-content-end" fill>
-            <Link href="/">
-              <a className={styles.navLink}>Home</a>
+          <Nav className="w-75 justify-content-evenly" fill>
+            <Link  href="/">
+              <a className="fs-3 text-secondary fw-bold text-decoration-none">Home</a>
             </Link>
             <Link href="/food">
-              <a className={styles.navLink}>Food</a>
+              <a className="fs-3 text-secondary fw-bold text-decoration-none">Food</a>
             </Link>
             <Link href="/menu">
-              <a className={styles.navLink}>Menu</a>
+              <a className="fs-3 text-secondary fw-bold text-decoration-none">Menu</a>
             </Link>
             <Link href="/events">
-              <a className={styles.navLink}>Events</a>
+              <a className="fs-3 text-secondary fw-bold text-decoration-none">Events</a>
             </Link>
             <Link href="/founders-club">
               {/* eslint-disable-next-line react/no-unescaped-entities */}
-              <a className={styles.navLink}>Founder's Club</a>
+              <a className="fs-3 text-secondary fw-bold text-decoration-none">Founder's Club</a>
             </Link>
           </Nav>
         </Navbar.Collapse>
