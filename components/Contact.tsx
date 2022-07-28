@@ -1,5 +1,7 @@
 import {Col, Container, Row} from "react-bootstrap";
 import React from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {ICONS} from "../icons";
 
 const Contact: React.FC = () => {
   return (
@@ -11,16 +13,15 @@ const Contact: React.FC = () => {
       </Row>
       <Container className="p-0 w-75">
         <Row className="pb-2 align-items-center">
-          <Col cols="12" className="p-0 d-flex align-items-start">
-            {/*<FontAwesomeIcon className="d-inline-block mr-2" size="xl" :icon=icons.phone ></FontAwesomeIcon>*/}
-            <a className="d-inline-block" href="tel:302-464-1039">(302) 464-1039</a>
+          <Col className="p-0 d-flex align-items-start">
+            <FontAwesomeIcon className="d-inline-block" size="lg" icon={ICONS['faPhone']} />
+            <a className="ml-2 d-inline-block" href="tel:302-464-1039">(302) 464-1039</a>
           </Col>
         </Row>
         <Row className="pb-2 align-items-center">
-          <Col cols="12" className="p-0 d-flex align-items-start">
-            {/*<FontAwesomeIcon className="d-inline-block mr-2" size="xl" :icon=icons.location></FontAwesomeIcon>*/}
-            <a className="d-inline-block" href="https://g.page/jaklbeer?share">128 Patriot Drive, Suite 11, Middletown,
-              DE 19709</a>
+          <Col className="p-0 d-flex align-items-start">
+            <FontAwesomeIcon className="d-inline-block" size="lg" icon={ICONS['faLocationDot']} />
+            <a className="ml-2 d-inline-block" href="https://g.page/jaklbeer?share">128 Patriot Drive, Suite 11, Middletown, DE 19709</a>
           </Col>
         </Row>
       </Container>
