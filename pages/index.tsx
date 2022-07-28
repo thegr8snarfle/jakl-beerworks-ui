@@ -17,28 +17,12 @@ const Home: NextPageWithLayout = () => {
     <Container fluid={true}>
       <Row>
         <Col>
-          <Carousel interval={5000}>
-            <Carousel.Item >
-              <Image
-                className="image-fill w-100"
-                src={images['beer']}
-                alt="First slide"
-                width={1000}
-                // height={500} automatically provided
-                // blurDataURL="data:..." automatically provided
-                // placeholder="blur" // Optional blur-up while loading
-              />
+          <Carousel fade={true} pause="hover" interval={5000}>
+            <Carousel.Item>
+              <img src={images['beer'].src} className="d-block w-100" />
             </Carousel.Item>
             <Carousel.Item>
-              <Image
-                className="d-block w-100"
-                src={images['beers']}
-                alt="First slide"
-                width={1000}
-                // height={500} automatically provided
-                // blurDataURL="data:..." automatically provided
-                // placeholder="blur" // Optional blur-up while loading
-              />
+              <img src={images['beers'].src} className="d-block w-100" />
             </Carousel.Item>
         </Carousel>
        </Col>

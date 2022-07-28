@@ -1,6 +1,7 @@
-import {faLocationDot, faPhone, IconDefinition} from "@fortawesome/free-solid-svg-icons";
+import {faBars, faLocationDot, faPhone, IconDefinition} from "@fortawesome/free-solid-svg-icons";
 
 export const ICONS: { [key: string ]: any } = {
   'faPhone': faPhone,
-  'faLocationDot': faLocationDot
+  'faLocationDot': faLocationDot,
+  'bars': faBars
 }

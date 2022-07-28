@@ -1,13 +1,7 @@
 import {Col, Container, Row} from "react-bootstrap";
 import React from "react";
-// import { faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const Hours: React.FC = () => {
-
-  // const icons = {
-  //   phone: faPhone,
-  //   location: faLocationDot
-  // }
 
   return (
     <Container className="text-center text-primary">

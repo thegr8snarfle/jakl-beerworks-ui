@@ -1,20 +1,21 @@
-import {Container, Navbar, NavItem} from "react-bootstrap";
+import {Container, Navbar} from "react-bootstrap";
 import styles from './navigation.module.scss';
 import Image from 'next/image';
 import Nav from 'react-bootstrap/Nav';
 import logo from '../assets/image/jakl-logo-clear.png';
 import Link from "next/link";
+import Icon from "./Icon";
 
 const Navigation = () => {
   return (
-    <Navbar className={styles.navbar} collapseOnSelect expand="lg" sticky={'top'}>
+    <Navbar className={styles.navbar} collapseOnSelect expand="lg">
       <Container>
         <Navbar.Brand href="/">
           <Image height={100} width={100} src={logo}
                  className={`${styles.brandImage} img-thumbnail rounded-circle position-absolute mt-2  d-none d-lg-block`}/>
         </Navbar.Brand>
         <Navbar.Toggle className="border-0 text-primary">
-          {/*<FontAwesomeIcon size="lg" :icon=hamburgerIcon />*/}
+          <Icon name="bars" size='lg' />
         </Navbar.Toggle>
         <Navbar.Collapse id="nav-collapse" className="justify-content-end">
           <Nav className="w-100 justify-content-end" fill>

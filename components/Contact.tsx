@@ -2,6 +2,7 @@ import {Col, Container, Row} from "react-bootstrap";
 import React from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {ICONS} from "../icons";
+import Icon from "./Icon";
 
 const Contact: React.FC = () => {
   return (
@@ -14,13 +15,13 @@ const Contact: React.FC = () => {
       <Container className="p-0 w-75">
         <Row className="pb-2 align-items-center">
           <Col className="p-0 d-flex align-items-start">
-            <FontAwesomeIcon className="d-inline-block" size="lg" icon={ICONS['faPhone']} />
+            <Icon name="faPhone" size="lg"/>
             <a className="ml-2 d-inline-block" href="tel:302-464-1039">(302) 464-1039</a>
           </Col>
         </Row>
         <Row className="pb-2 align-items-center">
           <Col className="p-0 d-flex align-items-start">
-            <FontAwesomeIcon className="d-inline-block" size="lg" icon={ICONS['faLocationDot']} />
+            <Icon name="faLocationDot" size="lg"/>
             <a className="ml-2 d-inline-block" href="https://g.page/jaklbeer?share">128 Patriot Drive, Suite 11, Middletown, DE 19709</a>
           </Col>
         </Row>
