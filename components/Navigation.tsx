@@ -8,37 +8,38 @@ import Icon from "./Icon";
 
 const Navigation = () => {
   return (
-    <Navbar className={styles.navbar} collapseOnSelect expand="lg">
-      <Container>
-        <Navbar.Brand href="/">
-          <Image height={100} width={100} src={logo}
-                 className={`${styles.brandImage} img-thumbnail rounded-circle position-absolute mt-2  d-none d-lg-block`}/>
-        </Navbar.Brand>
-        <Navbar.Toggle className="border-0 text-primary">
-          <Icon name="bars" size='lg' className="btn-outline-none"/>
-        </Navbar.Toggle>
-        <Navbar.Collapse id="nav-collapse" className="justify-content-end">
-          <Nav className="w-75 justify-content-evenly" fill>
-            <Link  href="/">
-              <a className="fs-3 text-secondary fw-bold text-decoration-none">Home</a>
-            </Link>
-            <Link href="/food">
-              <a className="fs-3 text-secondary fw-bold text-decoration-none">Food</a>
-            </Link>
-            <Link href="/menu">
-              <a className="fs-3 text-secondary fw-bold text-decoration-none">Menu</a>
-            </Link>
-            <Link href="/events">
-              <a className="fs-3 text-secondary fw-bold text-decoration-none">Events</a>
-            </Link>
-            <Link href="/founders-club">
-              {/* eslint-disable-next-line react/no-unescaped-entities */}
-              <a className="fs-3 text-secondary fw-bold text-decoration-none">Founder's Club</a>
-            </Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <>
+      <div className="top-nav position-relative">
+        <Navbar className={styles.navbar} expand="lg">
+          <Navbar.Toggle className="border-0 text-primary">
+            <Icon name="bars" size='lg' className="btn-outline-none"/>
+          </Navbar.Toggle>
+          <Navbar.Collapse className="justify-content-end">
+            <Nav className="w-75 justify-content-evenly" fill>
+              <Link  href="/">
+                <a className="fs-3 text-secondary fw-bold text-decoration-none">Home</a>
+              </Link>
+              <Link href="/food">
+                <a className="fs-3 text-secondary fw-bold text-decoration-none">Food</a>
+              </Link>
+              <Link href="/menu">
+                <a className="fs-3 text-secondary fw-bold text-decoration-none">Menu</a>
+              </Link>
+              <Link href="/events">
+                <a className="fs-3 text-secondary fw-bold text-decoration-none">Events</a>
+              </Link>
+              <Link href="/founders-club">
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
+                <a className="fs-3 text-secondary fw-bold text-decoration-none">Founder's Club</a>
+              </Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+        <a className={`${styles.brandImage} img-thumbnail rounded-circle position-absolute mt-2 d-none d-lg-block`}>
+          <img className="d-block" src={logo.src} />
+        </a>
+      </div>
+    </>
   )
 }
 

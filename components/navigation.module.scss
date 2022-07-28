@@ -3,11 +3,12 @@
 
 .navbar {
   background: $black;
-  padding: 0;
+  padding: 16px 0 16px 0;
   border-top: 3px solid $gray;
   border-bottom: 3px solid $gray;
+  position: relative;
 
-  @include large-device {
+  @include large-device() {
     background: transparent;
     border: none;
     color: $gray;
@@ -15,12 +16,20 @@
 
 }
 
- .brandImage {
-  background: #ffffff;
-  border: none;
-  max-height: 100px;
+
+.brandImage {
   left: 22px;
   top: -29px;
+
+  img {
+    max-height: 100px;
+    border: none;
+
+  }
+
+  @include large-device() {
+    position: relative;
+  }
 }
 
 .navbarToggler {
