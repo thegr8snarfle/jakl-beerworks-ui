@@ -1,7 +1,5 @@
 import {Col, Container, Row} from "react-bootstrap";
 import React from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {ICONS} from "../icons";
 import Icon from "./Icon";
 
 const Contact: React.FC = () => {

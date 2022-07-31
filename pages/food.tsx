@@ -1,9 +1,24 @@
-import {NextPageWithLayout} from "./_app";
 import {Col, Container, Row} from "react-bootstrap";
 import {ReactElement} from "react";
+import {BreweryEvent, NextPageWithLayout} from "../api";
+import {GetStaticProps} from "next/types";
+import {InferGetStaticPropsType} from "next";
 
-const FoodPage: NextPageWithLayout = () => {
-  // const foodEvents: BreweryEvent[] = FOOD_EVENTS;
+export const getStaticProps: GetStaticProps<{ foodEvents: BreweryEvent[]; }> = async (context) => {
+  console.log('getting food events...');
+
+  return {
+    props: {
+      foodEvents: []
+    }
+  }
+}
+
+const FoodPage: NextPageWithLayout<{ foodEvents: BreweryEvent[]; }> =
+  (
+    { foodEvents } : InferGetStaticPropsType<typeof  getStaticProps>
+  ) => {
+
   return (
     <Container className="food-container fluid overflow-scroll">
       <Row>

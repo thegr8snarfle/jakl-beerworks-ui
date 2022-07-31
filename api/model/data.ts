@@ -1,6 +1,5 @@
-import {Item} from './untappd.model';
-import {BreweryEvent } from './common.model';
-import goatYoga from '../assets/image/goat-yoga.jpg';
+import {MenuItem, BreweryEvent } from './common.model';
+import goatYoga from '../../assets/image/goat-yoga.jpg';
 import {DateTime} from "luxon";
 
 export const SECTIONS = {
@@ -30,7 +29,7 @@ export const SECTIONS = {
   ]
 }
 
-export const ITEMS: Item[] = [
+export const ITEMS: MenuItem[] = [
   {
     "id": 35968500,
     "section_id": 624730,

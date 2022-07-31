@@ -1,18 +1,9 @@
 import '../styles/global.scss';
-import type { AppProps } from 'next/app';
 import Layout from "../components/Layout";
-import {ReactElement, ReactNode} from "react";
-import {NextPage} from "next";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import {AppPropsWithLayout} from "../api";
 
-export type NextPageWithLayout = NextPage & {
-  getLayout?: (page: ReactElement) => ReactNode
-}
-
-type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout
-}
 
 // configure fontawesome styles
 config.autoAddCss = false;

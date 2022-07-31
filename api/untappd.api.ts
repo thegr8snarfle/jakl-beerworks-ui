@@ -1,10 +1,10 @@
-import {Item} from './untappd.model';
-import {ITEMS} from './data';
+import {BreweryItem, data } from "./model";
 
-export class UntappdAPI {
 
-  public fetchMenuItems(): Promise<Item[]> {
-    return Promise.resolve(ITEMS);
+class UntappdAPI {
+
+  public fetchMenuItems(): Promise<BreweryItem[]> {
+    return Promise.resolve(data.ITEMS);
   }
 
 }

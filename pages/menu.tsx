@@ -1,17 +1,22 @@
-import {NextPageWithLayout} from "./_app";
-import {ReactElement, useEffect, useState} from "react";
-import {Col, Container, Row} from "react-bootstrap";
-import { untappdAPI } from '../api/untappd.api';
-import {Item} from "../api/untappd.model";
+import { MenuItem, NextPageWithLayout, data } from "../api";
+import {ReactElement } from "react";
 import Beverage from "../components/Beverage";
+import {GetStaticProps} from "next/types";
+import {InferGetStaticPropsType} from "next";
 
-const MenuPage: NextPageWithLayout = () => {
+export const getStaticProps: GetStaticProps<{ menuItems: MenuItem[]; }> = async (context) => {
+  console.log('getting menu items...');
+  return {
+    props: {
+      menuItems: data.ITEMS
+    }
+  }
+}
 
-  const [ menuItems, setMenuItems ] = useState<Item[]>();
-
-  useEffect(() => {
-    untappdAPI.fetchMenuItems().then(data => setMenuItems(data));
-  }, []);
+const MenuPage: NextPageWithLayout<{ menuItems: MenuItem[]; }> =
+  (
+    { menuItems } : InferGetStaticPropsType<typeof getStaticProps>
+  ) => {
 
   return (
     <>
@@ -19,17 +24,7 @@ const MenuPage: NextPageWithLayout = () => {
       {
         menuItems && menuItems?.map(item => <Beverage bevvy={item} key={item.id} />)
       }
-      </>
-    // <Container className="fluid overflow-scroll">
-    //   <Row>
-    //     <Col>
-    //       <h2 className="text-secondary border-bottom border-5 border-secondary py-3 px-3 mb-4">Menu</h2>
-    //       {
-    //         menuItems && menuItems?.map(item => <Beverage bevvy={item} key={item.id} />)
-    //       }
-    //     </Col>
-    //   </Row>
-    // </Container>
+    </>
   )
 }
 

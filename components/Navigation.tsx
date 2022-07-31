@@ -1,6 +1,5 @@
 import {Container, Navbar} from "react-bootstrap";
 import styles from './navigation.module.scss';
-import Image from 'next/image';
 import Nav from 'react-bootstrap/Nav';
 import logo from '../assets/image/jakl-logo-clear.png';
 import Link from "next/link";

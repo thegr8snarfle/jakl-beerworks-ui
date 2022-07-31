@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { Col, Row} from "react-bootstrap";
-import {Item} from "../api/untappd.model";
+import { MenuItem } from "../api";
 import React from "react";
 import barBeer from '../assets/image/beer-on-bar.jpg';
 
-const Beverage: React.FC<{ bevvy: Item }> = ({ bevvy }) => {
+const Beverage: React.FC<{ bevvy: MenuItem }> = ({ bevvy }) => {
   return (
   <Row xs={1} md={2} >
     <Col>

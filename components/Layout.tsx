@@ -1,7 +1,6 @@
 import {Col, Container, Row} from "react-bootstrap";
 import Header from "./Header";
 import Footer from './Footer';
-import Navigation from "./Navigation";
 
 // @ts-ignore
 export default function Layout({ children }) {

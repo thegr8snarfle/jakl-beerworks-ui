@@ -1,10 +1,8 @@
-import type { NextPage } from 'next'
-import Image from 'next/image'
 import twoBeers from '../assets/image/two-beers.jpg';
 import beerLine from '../assets/image/beer-line.jpg';
 import {Carousel, Container, Row, Col} from "react-bootstrap";
 import {ReactElement} from "react";
-import {NextPageWithLayout} from "./_app";
+import {NextPageWithLayout} from "../api";
 
 const Home: NextPageWithLayout = () => {
   let slide = 1;

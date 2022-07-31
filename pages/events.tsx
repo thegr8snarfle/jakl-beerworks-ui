@@ -1,12 +1,25 @@
-import {NextPageWithLayout} from "./_app";
 import {ReactElement} from "react";
 import {Col, Container, Row} from "react-bootstrap";
-import {SOCIAL_EVENTS} from "../api/data";
-import {BreweryEvent} from "../api/common.model";
 import Event from "../components/Event";
+import {InferGetStaticPropsType} from "next";
+import {GetStaticProps} from "next/types";
+import {BreweryEvent, NextPageWithLayout} from "../api";
+import { data } from "../api/model";
 
-const EventsPage: NextPageWithLayout = () => {
-  const socialEvents: BreweryEvent[] = SOCIAL_EVENTS;
+export const getStaticProps: GetStaticProps<{ socialEvents: BreweryEvent[] }> = async (context) => {
+  console.log('getting social events ...');
+
+  return {
+    props: {
+      socialEvents: data.SOCIAL_EVENTS
+    }, // will be passed to the page component as props
+  }
+}
+
+const EventsPage: NextPageWithLayout<{ socialEvents: BreweryEvent[] }> =
+  (
+    { socialEvents }: InferGetStaticPropsType<typeof getStaticProps>
+  ) => {
 
   return (
     <Container className="overflow-scroll">

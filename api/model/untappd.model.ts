@@ -27,10 +27,10 @@ export interface Section {
   created_at: string;
   updated_at: string;
 
-  items: Item[];
+  items: BreweryItem[];
 }
 
-export interface Item {
+export interface BreweryItem {
   id: number;
   section_id: number;
   position: number;
