@@ -1,4 +1,4 @@
-import {BreweryEvent, MenuItem} from "./model";
+import {BreweryEvent, MenuItem} from "@model/index";
 import {facebookAPI} from "./facebook.api";
 import {untappdAPI} from "./untappd.api";
 

@@ -1,4 +1,4 @@
-import {NextPageWithLayout} from "../api/model";
+import {NextPageWithLayout} from "@model/index";
 import {ReactElement} from "react";
 import {Col, Container, Row} from "react-bootstrap";
 

@@ -1,4 +1,4 @@
-import {BreweryItem, data } from "./model";
+import {BreweryItem, data } from "@model/index";
 
 
 class UntappdAPI {

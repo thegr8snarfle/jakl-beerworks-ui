@@ -3,8 +3,7 @@ import {Col, Container, Row} from "react-bootstrap";
 import Event from "../components/Event";
 import {InferGetStaticPropsType} from "next";
 import {GetStaticProps} from "next/types";
-import {BreweryEvent, NextPageWithLayout} from "../api";
-import { data } from "../api/model";
+import {BreweryEvent, NextPageWithLayout, data} from "@model/index";
 
 export const getStaticProps: GetStaticProps<{ socialEvents: BreweryEvent[] }> = async (context) => {
   console.log('getting social events ...');

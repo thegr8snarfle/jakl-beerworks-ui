@@ -2,7 +2,7 @@ import twoBeers from '../assets/image/two-beers.jpg';
 import beerLine from '../assets/image/beer-line.jpg';
 import {Carousel, Container, Row, Col} from "react-bootstrap";
 import {ReactElement} from "react";
-import {NextPageWithLayout} from "../api";
+import {NextPageWithLayout} from "@model/index";
 
 const Home: NextPageWithLayout = () => {
   let slide = 1;

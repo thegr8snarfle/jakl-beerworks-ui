@@ -1,6 +1,6 @@
 import {Card, Col, Container, Row} from "react-bootstrap";
 import {DateTime} from 'luxon';
-import {BreweryEvent} from "../api";
+import {BreweryEvent} from '@model/index';
 import React, {useMemo} from "react";
 
 export const Event: React.FC<{ breweryEvent: BreweryEvent; }> = ({ breweryEvent }) => {

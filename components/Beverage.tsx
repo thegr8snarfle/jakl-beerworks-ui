@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { Col, Row} from "react-bootstrap";
-import { MenuItem } from "../api";
+
 import React from "react";
 import barBeer from '../assets/image/beer-on-bar.jpg';
+import {MenuItem} from "@model/index";
 
 const Beverage: React.FC<{ bevvy: MenuItem }> = ({ bevvy }) => {
   return (

@@ -1,6 +1,6 @@
 import {Col, Container, Row} from "react-bootstrap";
 import {ReactElement} from "react";
-import {BreweryEvent, NextPageWithLayout} from "../api";
+import {BreweryEvent, NextPageWithLayout} from "@model/index";
 import {GetStaticProps} from "next/types";
 import {InferGetStaticPropsType} from "next";
 

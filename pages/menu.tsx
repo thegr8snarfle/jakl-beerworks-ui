@@ -1,4 +1,4 @@
-import { MenuItem, NextPageWithLayout, data } from "../api";
+import { MenuItem, NextPageWithLayout, data } from "@model/index";
 import {ReactElement } from "react";
 import Beverage from "../components/Beverage";
 import {GetStaticProps} from "next/types";

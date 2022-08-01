@@ -1,5 +1,5 @@
 import {MenuItem, BreweryEvent } from './common.model';
-import goatYoga from '../../assets/image/goat-yoga.jpg';
+import goatYoga from '@assets/image/goat-yoga.jpg';
 import {DateTime} from "luxon";
 
 export const SECTIONS = {

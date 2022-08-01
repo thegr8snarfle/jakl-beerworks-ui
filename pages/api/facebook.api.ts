@@ -1,4 +1,4 @@
-import {BreweryEvent, data} from './model';
+import {BreweryEvent, data} from '@model/index';
 
 class FacebookAPI {
 
