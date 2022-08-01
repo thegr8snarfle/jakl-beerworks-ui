@@ -1,14 +1,16 @@
-import { MenuItem, NextPageWithLayout, data } from "@model/index";
+import { MenuItem, NextPageWithLayout } from "@model/common.model";
 import {ReactElement } from "react";
 import Beverage from "../components/Beverage";
 import {GetStaticProps} from "next/types";
 import {InferGetStaticPropsType} from "next";
+import {jaklService} from "../common/services/jakl.service";
 
 export const getStaticProps: GetStaticProps<{ menuItems: MenuItem[]; }> = async (context) => {
   console.log('getting menu items...');
+  const events = await jaklService.getMenu();
   return {
     props: {
-      menuItems: data.ITEMS
+      menuItems: events
     }
   }
 }

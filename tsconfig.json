@@ -16,14 +16,17 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@api/*": [
-        "pages/api/*"
+      "@services": [
+        "common/services/index"
       ],
       "@model/*": [
-        "model/*"
+        "common/model/*"
       ],
       "@assets/*": [
         "assets/*"
+      ],
+      "@test": [
+        "common/model/index"
       ]
     }
   },

@@ -3,14 +3,16 @@ import {Col, Container, Row} from "react-bootstrap";
 import Event from "../components/Event";
 import {InferGetStaticPropsType} from "next";
 import {GetStaticProps} from "next/types";
-import {BreweryEvent, NextPageWithLayout, data} from "@model/index";
+import {BreweryEvent, NextPageWithLayout } from "@model/common.model";
+import {jaklService} from "../common/services/jakl.service";
 
 export const getStaticProps: GetStaticProps<{ socialEvents: BreweryEvent[] }> = async (context) => {
   console.log('getting social events ...');
+  const events = await jaklService.getSocialEvents();
 
   return {
     props: {
-      socialEvents: data.SOCIAL_EVENTS
+      socialEvents: events
     }, // will be passed to the page component as props
   }
 }
