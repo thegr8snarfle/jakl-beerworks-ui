@@ -2,13 +2,14 @@ import Image from "next/image";
 import React from "react";
 import { Col, Row} from "react-bootstrap";
 import barBeer from '@assets/image/beer-on-bar.jpg';
+import beer from '@assets/image/beer-icon.png'
 import {MenuItem} from "@model/index";
 
 const Beverage: React.FC<{ bevvy: MenuItem }> = ({ bevvy }) => {
   return (
-  <Row xs={1} md={2} >
-    <Col>
-      <Image className="py-2 px-4 px-sm-1 bg-transparent col" src={barBeer}/>
+  <Row xs={1} md={2} className="align-items-center my-2">
+    <Col className="d-none d-md-block text-center align-middle">
+      <Image height={270} width={270} className="d-none py-2 px-4 px-sm-1 bg-transparent w-100 d-md-block" src={beer.src}/>
     </Col>
     <Col>
       <div className="stats">
