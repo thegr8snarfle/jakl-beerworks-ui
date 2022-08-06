@@ -6,11 +6,10 @@ import {InferGetStaticPropsType} from "next";
 import {jaklService} from "../common/services/jakl.service";
 
 export const getStaticProps: GetStaticProps<{ menuItems: MenuItem[]; }> = async (context) => {
-  console.log('getting menu items...');
-  const events = await jaklService.getMenu();
+  const items: MenuItem[] = await jaklService.getMenu();
   return {
     props: {
-      menuItems: events
+      menuItems: items
     }
   }
 }
