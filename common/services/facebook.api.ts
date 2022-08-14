@@ -1,25 +1,24 @@
-import {BreweryEvent, MenuItem} from '@model/common.model';
+import {BreweryEvent} from '@model/common.model';
 import goatYoga from "@assets/image/goat-yoga.jpg";
 import {DateTime} from "luxon";
-import {MenuItemResponse} from "./untappd.api";
 
 class FacebookAPI {
   readonly token: string = process.env.TOKEN ?? '';
   readonly baseUrl: string = `https://business.untappd.com/api/v1/`
 
   public async fetchEvents(): Promise<BreweryEvent[]> {
-    const sections =
-      await fetch(`${this.baseUrl}sections/624730/items`, {
+      return fetch(`${this.baseUrl}sections/624730/items`, {
         method: 'GET',
         headers: {
           'Authorization': `basic ${this.token}`
         }
-      });
-    // .catch((err) => {
-    //   console.error('Error ===>', err);
-    // });
-    const result: MenuItemResponse = await sections.json();
-    return Promise.resolve(SOCIAL_EVENTS);
+      })
+      .then(
+        (response) => Promise.resolve(response.json())
+      )
+      .catch(
+        (err) => (console.error('Error ===>', err))
+      );
   }
 }
 
