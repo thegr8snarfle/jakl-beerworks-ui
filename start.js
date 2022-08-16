@@ -1,1 +1,0 @@
-npm run env -- next start

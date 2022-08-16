@@ -40,7 +40,7 @@ export const Event: React.FC<{ breweryEvent: BreweryEvent; }> = ({ breweryEvent 
               <p className="text-white p-0 m-0 fs-5">
                 {breweryEvent.description}
               </p>
-              <p className="p-0 m-0 my-3"><a className="text-secondary fs-6" href="#">See More (link to FB?)</a></p>
+              <p className="p-0 m-0 my-3"><a className="text-secondary fs-6" href={breweryEvent.canonicalSource ?? ''}>See More</a></p>
             </Card.Body>
           </Card>
         </Col>

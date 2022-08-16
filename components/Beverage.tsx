@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import { Col, Row} from "react-bootstrap";
-import barBeer from '@assets/image/beer-on-bar.jpg';
 import beer from '@assets/image/beer-icon.png'
 import {MenuItem} from "@model/index";
 

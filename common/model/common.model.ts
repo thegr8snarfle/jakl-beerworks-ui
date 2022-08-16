@@ -24,6 +24,7 @@ export interface BreweryEvent {
   dateFrom: string;
   dateTo: string;
   img: any | null;
+  canonicalSource: string | null;
 }
 
 export interface MenuItem extends BreweryItem {
