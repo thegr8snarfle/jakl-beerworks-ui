@@ -1,4 +1,4 @@
-import {Container, Navbar} from "react-bootstrap";
+import {Navbar} from "react-bootstrap";
 import styles from './navigation.module.scss';
 import Nav from 'react-bootstrap/Nav';
 import logo from '@assets/image/jakl-logo-clear.png';
@@ -7,8 +7,7 @@ import Icon from "./Icon";
 
 const Navigation = () => {
   return (
-    <>
-      <div className="top-nav position-relative">
+      <div className="top-nav position-relative mt-4">
         <Navbar className={styles.navbar} expand="lg">
           <Navbar.Toggle className="border-0 text-primary">
             <Icon name="bars" size='lg' className="btn-outline-none"/>
@@ -28,17 +27,16 @@ const Navigation = () => {
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
                 <a className="fs-3 text-secondary fw-bold text-decoration-none">Founder's Club</a>
               </Link>
-              <Link  href="/">
+              <Link href="/">
                 <a className="fs-3 text-secondary fw-bold text-decoration-none">Home</a>
               </Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
         <a className={`${styles.brandImage} img-thumbnail rounded-circle position-absolute mt-2 d-none d-lg-block`}>
-          <img className="d-block" src={logo.src} />
+          <img className="d-block" src={logo.src}/>
         </a>
       </div>
-    </>
   )
 }
 

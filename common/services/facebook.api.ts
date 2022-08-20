@@ -1,5 +1,4 @@
 import {BreweryEvent} from '@model/common.model';
-import goatYoga from "@assets/image/goat-yoga.jpg";
 import {DateTime} from "luxon";
 
 class FacebookAPI {
@@ -34,7 +33,7 @@ export const SOCIAL_EVENTS: BreweryEvent[] = [
     description: `It's goat yoga, broh!`,
     dateFrom: dateTime.toISODate(),
     dateTo: dateTime.plus({'hours': 2}).toISODate(),
-    img: goatYoga,
+    img: null,
     canonicalSource: null
   },
   {
@@ -44,7 +43,7 @@ export const SOCIAL_EVENTS: BreweryEvent[] = [
     description: `Come paint with Karen, she's awesome!`,
     dateFrom: dateTime.plus({'weeks': 1}).toISODate(),
     dateTo: dateTime.plus({'hours': 2}).toISODate(),
-    img: goatYoga,
+    img: null,
     canonicalSource: null
   },
   {
@@ -54,7 +53,7 @@ export const SOCIAL_EVENTS: BreweryEvent[] = [
     description: `A really, really long description!A really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long description`,
     dateFrom: dateTime.plus({'weeks': 2}).toISODate(),
     dateTo: dateTime.plus({'hours': 2}).toISODate(),
-    img: goatYoga,
+    img: null,
     canonicalSource: null
   },
   {
@@ -64,7 +63,7 @@ export const SOCIAL_EVENTS: BreweryEvent[] = [
     description: `It's guns and beer, broh! We'll also be watching fox news and brainstorming ways to own the libs!`,
     dateFrom: dateTime.plus({'weeks': 3}).toISODate(),
     dateTo: dateTime.plus({'hours': 2}).toISODate(),
-    img: goatYoga,
+    img: null,
     canonicalSource: null
   }
 ];

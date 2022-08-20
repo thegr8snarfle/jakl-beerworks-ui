@@ -1,19 +1,21 @@
 import {NextPageWithLayout} from "@model/index";
 import {ReactElement} from "react";
 import {Col, Container, Row} from "react-bootstrap";
+import styles from './founders-club.module.scss';
 
-const FoundsClubPage: NextPageWithLayout = () => {
+const FoundersClubPage: NextPageWithLayout = () => {
   return (
-    <Container className="events-container fluid overflow-scroll">
-      <Row>
-        <Col>
-          <h2 className="text-secondary border-bottom border-5 border-secondary pb-3 px-4">Founders Club</h2>
+    <Container className={`${ styles.foundersClub} overflow-scroll`}>
+      <Row className={`${ styles.banner}`} >
+        <Col className="d-flex flex-column align-content-center justify-content-center">
+          <h2 className="text-primary text-left">JAKL Beer Works Founder’s Club</h2>
+          <h5 className="text-primary text-left">Become an honorary member of the JAKL Beer Works team and help us build a better taproom experience!</h5>
         </Col>
       </Row>
     </Container>
   )
 }
 
-FoundsClubPage.getLayout = (page: ReactElement) => page;
+FoundersClubPage.getLayout = (page: ReactElement) => page;
 
-export default FoundsClubPage;
+export default FoundersClubPage;

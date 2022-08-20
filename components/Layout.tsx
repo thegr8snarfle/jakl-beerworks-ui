@@ -1,24 +1,24 @@
 import {Col, Container, Row} from "react-bootstrap";
 import Header from "./Header";
 import Footer from './Footer';
+import React, {ReactNode} from "react";
 
-// @ts-ignore
-export default function Layout({ children }) {
+const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <Container className="jakl p-4">
-      <Row>
+    <Container className="jakl" fluid>
+      <Row className="mx-4">
         <Col>
           <Header />
         </Col>
       </Row>
-      <Row>
+      <Row className="mx-4">
         <Col>
-          <main className="row content h-100 my-3 py-3">
+          <main className="content h-100 my-3 py-3">
             { children }
           </main>
         </Col>
       </Row>
-      <Row>
+      <Row className="mx-4">
         <Col>
           <Footer />
         </Col>
@@ -26,3 +26,5 @@ export default function Layout({ children }) {
     </Container>
   )
 }
+
+export default Layout;

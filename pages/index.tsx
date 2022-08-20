@@ -15,10 +15,10 @@ const Home: NextPageWithLayout = () => {
   };
 
   return (
-    <Container fluid={true}>
-      <Row >
+    <Container>
+      <Row>
         <Col className="align-items-center">
-          <Carousel fade={true} pause="hover" interval={5000}>
+          <Carousel className="w-100" fade={true} pause="hover" interval={5000}>
             <Carousel.Item className="text-center">
               <img height={800} width={800} src={images['first'].src}/>
             </Carousel.Item>

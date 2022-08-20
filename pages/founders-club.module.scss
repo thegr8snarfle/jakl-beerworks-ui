@@ -1,0 +1,16 @@
+.foundersClub {
+
+  .banner {
+    height: 40vh;
+    background: url("../assets/image/founders-club-banner.jpg") no-repeat;
+    background-size: cover;
+    background-position-y: 50%;
+
+    .col {
+
+      h2, h4 {
+        max-width: 50%;
+      }
+    }
+  }
+}

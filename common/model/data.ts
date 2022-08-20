@@ -1,5 +1,4 @@
 import {MenuItem, BreweryEvent } from './common.model';
-import goatYoga from '@assets/image/goat-yoga.jpg';
 import {DateTime} from "luxon";
 
 export const SECTIONS = {
@@ -465,7 +464,8 @@ export const SOCIAL_EVENTS: BreweryEvent[] = [
     description: `It's goat yoga, broh!`,
     dateFrom: dateTime.toISODate(),
     dateTo: dateTime.plus({'hours': 2}).toISODate(),
-    img: goatYoga
+    img: null,
+    canonicalSource: null
   },
   {
     id: '0934oljslkv3451f353',
@@ -474,7 +474,8 @@ export const SOCIAL_EVENTS: BreweryEvent[] = [
     description: `Come paint with Karen, she's awesome!`,
     dateFrom: dateTime.plus({'weeks': 1}).toISODate(),
     dateTo: dateTime.plus({'hours': 2}).toISODate(),
-    img: goatYoga
+    img: null,
+    canonicalSource: null
   },
   {
     id: '0934oljslkv345fsd',
@@ -483,7 +484,8 @@ export const SOCIAL_EVENTS: BreweryEvent[] = [
     description: `A really, really long description!A really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long description`,
     dateFrom: dateTime.plus({'weeks': 2}).toISODate(),
     dateTo: dateTime.plus({'hours': 2}).toISODate(),
-    img: goatYoga
+    img: null,
+    canonicalSource: null
   },
   {
     id: '0934oljslkv34345fsd',
@@ -492,7 +494,8 @@ export const SOCIAL_EVENTS: BreweryEvent[] = [
     description: `It's guns and beer, broh! We'll also be watching fox news and brainstorming ways to own the libs!`,
     dateFrom: dateTime.plus({'weeks': 3}).toISODate(),
     dateTo: dateTime.plus({'hours': 2}).toISODate(),
-    img: goatYoga
+    img: null,
+    canonicalSource: null
   }
 ];
 
@@ -504,7 +507,8 @@ export const FOOD_EVENTS: BreweryEvent[] = [
     description: `Tacooooooooooossssssss!`,
     dateFrom: dateTime.toISODate(),
     dateTo: dateTime.plus({'hours': 5}).toISODate(),
-    img: null
+    img: null,
+    canonicalSource: null
   },
   {
     id: 'sdf2342342',
@@ -513,7 +517,8 @@ export const FOOD_EVENTS: BreweryEvent[] = [
     description: `Greek food by Gerry.`,
     dateFrom: dateTime.plus({'weeks': 1}).toISODate(),
     dateTo: dateTime.plus({'hours': 3}).toISODate(),
-    img: null
+    img: null,
+    canonicalSource: null
   },
   {
     id: 'sdgdftgerg43534',
@@ -522,7 +527,8 @@ export const FOOD_EVENTS: BreweryEvent[] = [
     description: `A really, really long description!A really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long description`,
     dateFrom: dateTime.plus({'weeks': 2}).toISODate(),
     dateTo: dateTime.plus({'hours': 5}).toISODate(),
-    img: null
+    img: null,
+    canonicalSource: null
   },
   {
     id: 'ghkjhg45654',
@@ -531,6 +537,7 @@ export const FOOD_EVENTS: BreweryEvent[] = [
     description: `Latin-Asian fusion - it's amazing`,
     dateFrom: dateTime.plus({'weeks': 3}).toISODate(),
     dateTo: dateTime.plus({'hours': 3}).toISODate(),
-    img: null
+    img: null,
+    canonicalSource: null
   }
 ];
