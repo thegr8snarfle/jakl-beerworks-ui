@@ -6,8 +6,7 @@ import {GetStaticProps} from "next/types";
 import {BreweryEvent, NextPageWithLayout } from "@model/common.model";
 import {jaklService} from "../common/services/jakl.service";
 
-export const getStaticProps: GetStaticProps<{ socialEvents: BreweryEvent[] }> = async (context) => {
-  console.log('getting social events ...');
+export const getStaticProps: GetStaticProps<{ socialEvents: BreweryEvent[] }> = async () => {
   const events = await jaklService.getSocialEvents();
 
   return {

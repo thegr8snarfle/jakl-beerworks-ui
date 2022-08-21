@@ -33,9 +33,11 @@ const Navigation = () => {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <a className={`${styles.brandImage} img-thumbnail rounded-circle position-absolute mt-2 d-none d-lg-block`}>
-          <img className="d-block" src={logo.src}/>
-        </a>
+        <Link href="/">
+          <a className={`${styles.brandImage} img-thumbnail rounded-circle position-absolute mt-2 d-none d-lg-block`}>
+            <img className="d-block" src={logo.src}/>
+          </a>
+        </Link>
       </div>
   )
 }

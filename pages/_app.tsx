@@ -4,8 +4,6 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import {AppPropsWithLayout} from "@model/index";
 
-console.debug('next > ', )
-
 // configure fontawesome styles
 config.autoAddCss = false;
 

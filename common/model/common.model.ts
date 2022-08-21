@@ -4,7 +4,8 @@ import {AppProps} from "next/app";
 import {BreweryItem} from "./untappd.model";
 
 export enum Environment {
-  dev = 'dev',
+  local = 'local',
+  stage = 'stage',
   production = 'production'
 }
 

@@ -20,7 +20,7 @@ const FoodPage: NextPageWithLayout<{ foodEvents: BreweryEvent[]; }> =
   ) => {
 
   return (
-    <Container className="food-container fluid overflow-scroll">
+    <Container className="food-container overflow-scroll">
       <Row>
         <Col>
           <h2 className="text-secondary border-bottom border-5 border-secondary pb-3 px-4">Food Trucks</h2>
