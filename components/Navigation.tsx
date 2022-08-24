@@ -13,22 +13,22 @@ const Navigation = () => {
             <Icon name="bars" size='lg' className="btn-outline-none"/>
           </Navbar.Toggle>
           <Navbar.Collapse className="justify-content-end">
-            <Nav className="w-75 justify-content-evenly" fill>
+            <Nav className="w-50 justify-content-evenly" fill>
               {/*<Link href="/food">*/}
               {/*  <a className="fs-3 text-secondary fw-bold text-decoration-none">Food</a>*/}
               {/*</Link>*/}
               <Link href="/menu">
-                <a className="fs-3 text-secondary fw-bold text-decoration-none">Menu</a>
+                <a className="fs-4 text-secondary fw-bold text-decoration-none">Menu</a>
               </Link>
               <Link href="/events">
-                <a className="fs-3 text-secondary fw-bold text-decoration-none">Events</a>
+                <a className="fs-4 text-secondary fw-bold text-decoration-none">Events</a>
               </Link>
               <Link href="/founders-club">
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
-                <a className="fs-3 text-secondary fw-bold text-decoration-none">Founder's Club</a>
+                <a className="fs-4 text-secondary fw-bold text-decoration-none">Founder's Club</a>
               </Link>
               <Link href="/">
-                <a className="fs-3 text-secondary fw-bold text-decoration-none">Home</a>
+                <a className="fs-4 text-secondary fw-bold text-decoration-none">Home</a>
               </Link>
             </Nav>
           </Navbar.Collapse>

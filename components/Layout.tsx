@@ -5,7 +5,7 @@ import React, {ReactNode} from "react";
 
 const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <Container className="jakl" fluid>
+    <Container className="jakl">
       <Row className="mx-4">
         <Col>
           <Header />
@@ -18,7 +18,7 @@ const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
           </main>
         </Col>
       </Row>
-      <Row className="mx-4">
+      <Row className="mx-4 mt-5">
         <Col>
           <Footer />
         </Col>
