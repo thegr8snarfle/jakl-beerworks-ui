@@ -1,4 +1,3 @@
-import { BreweryItem } from "@model/untappd.model";
 import {MenuItem} from "@test";
 
 export interface MenuItemResponse {
@@ -7,7 +6,7 @@ export interface MenuItemResponse {
 
 class UntappdAPI {
 
-  readonly token: string = process.env.TOKEN ?? '';
+  readonly token: string = process.env.UNTAPPED_API_TOKEN ?? '';
   readonly baseUrl: string = `https://business.untappd.com/api/v1/`
 
   public async fetchMenuItems(): Promise<MenuItem[]> {
@@ -18,10 +17,8 @@ class UntappdAPI {
           'Authorization': `basic ${this.token}`
         }
       });
-          // .catch((err) => {
-          //   console.error('Error ===>', err);
-          // });
     const result: MenuItemResponse = await sections.json();
+
     return Promise.resolve(result.items);
   }
 
