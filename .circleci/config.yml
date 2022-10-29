@@ -1,0 +1,38 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@5.0.3
+
+jobs:
+  build: # this can be any name you choose
+    executor: node/default # use the default executor defined within the orb
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: npm
+      - run:
+          command: echo building!!!
+          name: Nada
+      - run:
+          command: npm run build
+          name: Build app
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - .
+  deploy:
+    executor: node/default # use the default executor defined within the orb
+    steps:
+      - run:
+          command: echo deploying!!
+workflows:
+  build_deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: feat(circle-ci)
+      - deploy:
+          filters:
+            branches:
+              only: feat(circle-ci)
