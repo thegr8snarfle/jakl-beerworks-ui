@@ -5,7 +5,9 @@ class ConfigService {
   public readonly isDevMode: boolean = (process.env.environment === Environment.local);
 
   constructor() {
-    console.debug('JAKL service.isDebugMode => ', this.isDevMode);
+    if (this.isDevMode) {
+      console.debug('JAKL service.isDebugMode!');
+    }
   }
 }
 
