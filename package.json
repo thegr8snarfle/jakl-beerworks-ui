@@ -8,7 +8,7 @@
     "start": "next start -p 80",
     "lint": "next lint",
     "build:start": "npm run build && npm run start",
-    "build:image": "docker build -t aklaimd/jakl-ui ."
+    "build:image": "docker build -t aklaimd/jakl-ui:latest ."
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
