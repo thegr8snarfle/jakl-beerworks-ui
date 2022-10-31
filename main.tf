@@ -127,8 +127,8 @@ sudo amazon-linux-extras install docker
 sudo usermod -a -G docker ec2-user
 sudo service docker start
 docker login --username aklaimd --password Moople123#
-docker pull aklaimd/jakl-ui:1.0.6
-docker run -d -p 80:80 aklaimd/jakl-ui:1.0.6
+docker pull aklaimd/jakl-ui:latest
+docker run -d -p 80:80 aklaimd/jakl-ui:latest
 EOF
 
 }
