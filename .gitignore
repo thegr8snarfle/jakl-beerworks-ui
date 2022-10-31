@@ -37,3 +37,9 @@ yarn-error.log*
 ./\.idea/
 /.idea/
 /.next/
+
+
+/.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
