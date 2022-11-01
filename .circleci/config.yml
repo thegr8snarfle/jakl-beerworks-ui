@@ -1,11 +1,11 @@
 version: 2.1
-
 orbs:
   node: circleci/node@5.0.3
+  docker: circleci/docker@2.1.4
 
 jobs:
-  build: # this can be any name you choose
-    executor: node/default # use the default executor defined within the orb
+  build_next:
+    executor: node/default
     steps:
       - checkout
       - node/install-packages:
@@ -20,19 +20,31 @@ jobs:
           root: ~/project
           paths:
             - .
-  deploy:
-    executor: node/default # use the default executor defined within the orb
+  test_next:
+    executor: node/default
     steps:
       - run:
-          command: echo deploying!!
+          command: |
+            echo "Testing NextJS..."
 workflows:
-  build_deploy:
+  build_containerize_app:
     jobs:
-      - build:
-          filters:
-            branches:
-              only: main
-      - deploy:
-          filters:
-            branches:
-              only: main
+     - build_next
+     - docker/publish:
+         executor:
+           image: circleci/node
+           name: docker/docker
+           tag: boron-browsers
+         image: aklaimd/jakl-ui
+         remote-docker-dlc: true
+         tag: latest
+         use-remote-docker: true
+         docker-username: DOCKER_LOGIN
+         docker-password: DOCKER_PASSWORD
+         deploy: true
+         after_build:
+           - run:
+               command: |
+                 echo "Now kick off terraform!"
+         requires:
+           - build_next
