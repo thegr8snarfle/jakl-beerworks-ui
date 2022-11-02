@@ -2,6 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@5.0.3
   docker: circleci/docker@2.1.4
+  terraform: circleci/terraform@3.1
 
 jobs:
   build_next:
@@ -26,25 +27,43 @@ jobs:
       - run:
           command: |
             echo "Testing NextJS..."
+  terrorformize:
+    executor: terraform/default
+    steps:
+      - checkout
+      - run:
+          name: terraform init
+          command: | 
+            terraform init -backend-config="access_key=$AWS_ACCESS_KEY" -backend-config="secret_key=$AWS_SECRET"
+      - terraform/validate:
+          path: .
+      - terraform/plan:
+          path: .
+      - terraform/apply:
+          path: .
+#          requires:
+#            - terraform/plan
+
 workflows:
-  build_containerize_app:
+  containerize_deploy:
     jobs:
-     - build_next
-     - docker/publish:
-         executor:
-           image: circleci/node
-           name: docker/docker
-           tag: boron-browsers
-         image: aklaimd/jakl-ui
-         remote-docker-dlc: true
-         tag: latest
-         use-remote-docker: true
-         docker-username: DOCKER_LOGIN
-         docker-password: DOCKER_PASSWORD
-         deploy: true
-         after_build:
-           - run:
-               command: |
-                 echo "Now kick off terraform!"
-         requires:
-           - build_next
+      - docker/publish:
+          executor:
+            image: circleci/node
+            name: docker/docker
+            tag: boron-browsers
+          image: aklaimd/jakl-ui
+          remote-docker-dlc: true
+          tag: latest
+          use-remote-docker: true
+          docker-username: DOCKER_LOGIN
+          docker-password: DOCKER_PASSWORD
+          deploy: true
+      - terrorformize:
+          filters:
+            branches:
+              only:
+                - main
+                - feat(circle-ci-terraform)
+          requires:
+            - docker/publish
