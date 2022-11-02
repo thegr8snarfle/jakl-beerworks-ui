@@ -23,7 +23,7 @@ const Home: NextPageWithLayout = () => {
       </Head>
       <Container>
         <Row>
-          <Col className="align-items-center">
+          <Col className="align-items-center d-none d-lg-block">
             <Carousel className="w-100" fade={true} pause="hover" interval={5000}>
               <Carousel.Item className="text-center">
                 <img height={600} width={600} src={images['first'].src}/>
