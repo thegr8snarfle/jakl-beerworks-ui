@@ -42,7 +42,7 @@ jobs:
       - run:
           name: terraform apply
           command: |
-            terraform apply -replace=aws_instance.jakl-web-auto
+            terraform apply -replace=aws_instance.jakl-web-auto -auto-approve
 #          requires:
 #            - terraform/plan
 
