@@ -6,7 +6,7 @@ import React, {ReactNode} from "react";
 const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <Container className="jakl">
-      <Row className="header-container mx-0 my-sm-2 mx-lg-4 top-0" style={{ zIndex: 1000 }}>
+      <Row className="header-container mx-0 mb-3 top-0" style={{ zIndex: 1000 }}>
         <Col className="p-0">
           <Header />
         </Col>
