@@ -3,31 +3,72 @@
 
 .navbar {
   background: $black;
-  padding: 16px 0 16px 0;
   border-top: 3px solid $gray;
   border-bottom: 3px solid $gray;
-  position: relative;
+  margin: 16px 0 8px 0;
 
-  @include large-device() {
+
+  @include medium-device() {
     background: transparent;
     border: none;
     color: $gray;
+    position: relative;
   }
 
+}
+
+.navbarNav {
+  justify-content: end;
+  justify-items: flex-end;
+  align-items: flex-end;
+
+  @include medium-device() {
+    align-items: baseline;
+  }
+}
+
+.navBarLink {
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  color: $secondary;
+
+  @include medium-device() {
+    font-size: 2rem;
+  }
+}
+
+.smallLogo {
+  left: 40%;
+  position: absolute;
+}
+
+.offcanvas {
+  background: transparent;
+  color: $secondary;
+}
+
+.offcanvas-header {
+  text-align: end;
+}
+
+.btn-close  {
+  background-color: white;
+  opacity: .8;
+  font-size: .8rem;
 }
 
 
 .brandImage {
   left: 22px;
-  top: -29px;
+  top: -33px;
 
   img {
     max-height: 100px;
     border: none;
-
   }
 
-  @include large-device() {
+  @include medium-device() {
     position: relative;
   }
 }

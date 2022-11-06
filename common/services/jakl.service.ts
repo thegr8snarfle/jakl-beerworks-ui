@@ -7,8 +7,7 @@ import {configService} from "./config.service";
 class JAKLService {
 
   public getSocialEvents():  Promise<BreweryEvent[]> {
-    return Promise.resolve(SOCIAL_EVENTS);
-    // return (configService.isDevMode ? Promise.resolve(SOCIAL_EVENTS) : facebookAPI.fetchEvents());
+    return (configService.isDevMode ? Promise.resolve(SOCIAL_EVENTS) : facebookAPI.fetchEvents());
   }
 
   public getMenu(): Promise<MenuItem[]> {

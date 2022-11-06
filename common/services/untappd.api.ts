@@ -6,7 +6,7 @@ export interface MenuItemResponse {
 
 class UntappdAPI {
 
-  readonly token: string = process.env.UNTAPPED_API_TOKEN ?? '';
+  readonly token: string = process.env.untappedAPIToken ?? '';
   readonly baseUrl: string = `https://business.untappd.com/api/v1/`
 
   public async fetchMenuItems(): Promise<MenuItem[]> {
