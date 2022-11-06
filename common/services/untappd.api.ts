@@ -5,8 +5,8 @@ export interface MenuItemResponse {
 }
 
 class UntappdAPI {
-
-  readonly token: string = process.env.untappedAPIToken ?? '';
+  //TODO remove encoding of API token here
+  readonly token: string = btoa(`austin.kulp@gmail.com:${process.env.untappedAPIToken}`) ?? '';
   readonly baseUrl: string = `https://business.untappd.com/api/v1/`
 
   public async fetchMenuItems(): Promise<MenuItem[]> {

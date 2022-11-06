@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
-    untappedAPIToken: 'YXVzdGluLmt1bHBAZ21haWwuY29tOjRhR3ZVc2YtSEhzS0tLTHdDLUc2',
+    untappedAPIToken: '4aGvUsf-HHsKKKLwC-G6',
     environment: 'production',
     port: 80,
     test: 'PROD_DEV'
