@@ -144,6 +144,7 @@ resource "aws_security_group" "web-sg-auto" {
 # INSTANCES #
 resource "aws_instance" "jakl-web-auto" {
   ami                    = data.aws_ami.amazonLinux.id
+  availability_zone      = "us-west-2"
   instance_type          = "t2.medium"
   subnet_id              = aws_subnet.web-subnt-auto.id
   vpc_security_group_ids = [aws_security_group.web-sg-auto.id]
