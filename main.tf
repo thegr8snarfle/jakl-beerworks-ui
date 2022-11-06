@@ -5,7 +5,7 @@ terraform {
   backend "s3" {
     bucket = "jakl-tf-state"
     key    = "terraform.tfstate"
-    region = "us-west-2a"
+    region = "us-west-2"
   }
 }
 
@@ -16,7 +16,7 @@ terraform {
 provider "aws" {
   access_key = "AKIARJXCRRNHIIUEKSZ6"
   secret_key = "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"
-  region     = "us-west-2a"
+  region     = "us-west-2"
 }
 
 ##################################################################################
