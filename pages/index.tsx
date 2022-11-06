@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import firstSlide from '../assets/image/bar-beer-1.jpg';
 import secondSlide from '../assets/image/beers-cornfield.jpg';
 import thirdSlide from '../assets/image/bar-beer-2.jpg';
@@ -24,18 +25,18 @@ const Home: NextPageWithLayout = () => {
       <Container>
         <Row>
           <Col className="align-items-center d-block">
-            <Carousel className="w-100" fade={true} pause="hover" interval={5000}>
+            <Carousel className="w-100" fade={true} pause="hover" interval={7500}>
               <Carousel.Item className="text-center">
-                <img height={600} width={600} src={images['first'].src}/>
+                <Image height={600} width={600} src={images['first'].src}/>
               </Carousel.Item>
               <Carousel.Item className="text-center">
-                <img height={600} width={600} src={images['second'].src} />
+                <Image height={600} width={600} src={images['second'].src} />
               </Carousel.Item>
               <Carousel.Item className="text-center">
-                <img height={600} width={600} src={images['third'].src} />
+                <Image height={600} width={600} src={images['third'].src} />
               </Carousel.Item>
               <Carousel.Item className="text-center">
-                <img height={600} width={600} src={images['fourth'].src} />
+                <Image height={600} width={600} src={images['fourth'].src} />
               </Carousel.Item>
             </Carousel>
           </Col>

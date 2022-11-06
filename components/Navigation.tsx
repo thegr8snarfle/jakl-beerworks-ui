@@ -13,7 +13,7 @@ const Navigation = () => {
             <Icon name="bars" size='lg' className="btn-outline-none"/>
           </Navbar.Toggle>
           <div className="small-logo">
-            <Image src={logo} className="d-md-none d-flex rounded-circle" height={60} width={60}/>
+            <Image src={logo} className="d-md-none d-flex rounded-circle" height={80} width={80}/>
           </div>
           <Navbar.Offcanvas className="offcanvas" style={{ background: 'transparent'}} placement="end">
             <Offcanvas.Header className="offcanvas-header" closeButton />
