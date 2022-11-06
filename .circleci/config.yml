@@ -61,11 +61,14 @@ workflows:
           docker-username: DOCKER_LOGIN
           docker-password: DOCKER_PASSWORD
           deploy: true
+          filters:
+            branches:
+              only:
+                - main
       - terrorformize:
           filters:
             branches:
               only:
                 - main
-                - feat(circle-ci-terraform)
           requires:
             - docker/publish
