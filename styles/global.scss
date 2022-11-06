@@ -21,3 +21,8 @@ html {
 
 @import "./_bootstrap";
 @import "./_mixins";
+
+// TODO Figure out a better way to get around the global-only import
+@import "./components/Navigation";
+@import "./components/Layout";
+@import "./components/Hours";

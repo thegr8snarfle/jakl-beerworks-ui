@@ -7,15 +7,15 @@ import React from "react";
 const Footer = () => {
   return (
     <Container>
-      <Row className="gy-3" xs={1} md={2}>
-        <Col className="border-top border-5 border-secondary pt-4">
+      <Row className="gy-3 mx-0" xs={1} md={2}>
+        <Col className="border-top border-5 border-secondary py-2 order-1">
           <Hours></Hours>
         </Col>
-        <Col className="border-top border-5 border-secondary pt-4">
+        <Col className="border-top border-5 border-secondary py-2 order-0">
           <Contact></Contact>
         </Col>
       </Row>
-      <Row className="mt-4" >
+      <Row className="mt-2" >
         <Col className="align-baseline">
           <ul className="list-unstyled m-0 w-100 text-center">
             <li className="d-inline-block">

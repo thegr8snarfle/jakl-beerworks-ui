@@ -1,0 +1,12 @@
+@import "../styles/mixins";
+
+.hours {
+
+   .days {
+      text-align: center;
+
+     @include large-device() {
+       text-align: left;
+     }
+   }
+}
