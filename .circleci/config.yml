@@ -27,16 +27,6 @@ jobs:
       - run:
           command: |
             echo "Testing NextJS..."
-  destroy:
-    docker:
-      - image: docker.mirror.hashicorp.services/hashicorp/terraform:light
-    steps:
-      - attach_workspace:
-          at: .
-      - run:
-          name: terraform destroy
-          command: |
-            terraform apply -auto-approve tfdestroy
   terrorformize:
     docker:
       - image: docker.mirror.hashicorp.services/hashicorp/terraform:light
@@ -53,7 +43,7 @@ jobs:
       - run:
           name: terraform apply
           command: |
-            terraform apply -auto-approve -replace=aws_instance.jakl-web-auto tfapply
+            terraform apply -auto-approve -replace=aws_instance.jakl-web-auto
 #          requires:
 #            - terraform/plan
 
