@@ -5,7 +5,7 @@ terraform {
   backend "s3" {
     bucket = "jakl-tf-state"
     key    = "terraform.tfstate"
-    region = "us-west-2"
+    region = "us-west-2a"
   }
 }
 
@@ -16,7 +16,7 @@ terraform {
 provider "aws" {
   access_key = "AKIARJXCRRNHIIUEKSZ6"
   secret_key = "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"
-  region     = "us-west-2"
+  region     = "us-west-2a"
 }
 
 ##################################################################################
@@ -144,7 +144,7 @@ resource "aws_security_group" "web-sg-auto" {
 # INSTANCES #
 resource "aws_instance" "jakl-web-auto" {
   ami                    = data.aws_ami.amazonLinux.id
-  availability_zone      = "us-west-2"
+  availability_zone      = "us-west-2a"
   instance_type          = "t2.medium"
   subnet_id              = aws_subnet.web-subnt-auto.id
   vpc_security_group_ids = [aws_security_group.web-sg-auto.id]
