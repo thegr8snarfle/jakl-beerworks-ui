@@ -87,6 +87,7 @@ resource "aws_subnet" "web-subnt-auto" {
   cidr_block              = "10.1.254.0/24"
   vpc_id                  = aws_vpc.vpc-auto.id
   map_public_ip_on_launch = true
+  availability_zone = "us-west-2a"
   tags = {
     name: "web-subnt-auto"
   }
