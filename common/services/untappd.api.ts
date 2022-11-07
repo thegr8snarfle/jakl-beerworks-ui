@@ -1,4 +1,5 @@
 import {MenuItem} from "@test";
+import {configService} from './config.service';
 
 export interface MenuItemResponse {
   items: MenuItem[];
@@ -6,10 +7,11 @@ export interface MenuItemResponse {
 
 class UntappdAPI {
   //TODO remove encoding of API token here
-  readonly token: string = btoa(`austin.kulp@gmail.com:${process.env.untappedAPIToken}`) ?? '';
+  readonly token: string = configService.uptappedAPIKey;
   readonly baseUrl: string = `https://business.untappd.com/api/v1/`
 
   public async fetchMenuItems(): Promise<MenuItem[]> {
+    //TODO lets not hardcode the section ID...
     const sections =
       await fetch(`${this.baseUrl}sections/624730/items`, {
         method: 'GET',
@@ -25,7 +27,6 @@ class UntappdAPI {
 }
 
 export const untappdAPI: UntappdAPI = new UntappdAPI();
-
 
 export const ITEMS: MenuItem[] = [
   {

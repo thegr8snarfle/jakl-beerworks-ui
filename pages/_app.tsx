@@ -10,8 +10,6 @@ config.autoAddCss = false;
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page)
 
-  console.debug('loading app component')
-
   return getLayout(
     <Layout>
       <Component {...pageProps} />

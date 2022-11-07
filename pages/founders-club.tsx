@@ -50,11 +50,11 @@ const FoundersClubPage: NextPageWithLayout = () => {
                 improvement plans includes the below proposed (and very preliminary) plan for our outdoor beer garden.
               </li>
             </ul>
-            <div className="w-100 text-center py-3">
-              <button className="px-4 py-2 rounded-pill bg-secondary btn-outline-none border-0 text-light" onClick={(e) => console.debug('signed up!')}>
-                Signup
-              </button>
-            </div>
+            {/*<div className="w-100 text-center py-3">*/}
+            {/*  <button className="px-4 py-2 rounded-pill bg-secondary btn-outline-none border-0 text-light" onClick={(e) => console.debug('signed up!')}>*/}
+            {/*    Signup*/}
+            {/*  </button>*/}
+            {/*</div>*/}
           </Col>
         </Row>
         <Row className="mt-5 photos" xs={1} md={3}>

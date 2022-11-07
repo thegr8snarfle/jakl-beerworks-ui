@@ -1,6 +1,7 @@
 import {Col, Container, Row} from "react-bootstrap";
 import React from "react";
 import Icon from "./Icon";
+import Map from './Map';
 
 const Contact: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ const Contact: React.FC = () => {
           <h2 className="p-2 text-center fw-bold h2">Contact</h2>
         </Col>
       </Row>
-      <Row className="">
+      <Row>
         <Col>
           <ul className="list-unstyled m-0">
             <li className="d-flex align-items-center">
@@ -24,6 +25,11 @@ const Contact: React.FC = () => {
               </a>
             </li>
           </ul>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Map />
         </Col>
       </Row>
     </Container>
