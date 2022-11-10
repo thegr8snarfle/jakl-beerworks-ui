@@ -10,22 +10,27 @@ terraform {
 }
 
 ##################################################################################
-# PROVIDERS
-##################################################################################
-
-provider "aws" {
-  access_key = "AKIARJXCRRNHIIUEKSZ6"
-  secret_key = "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"
-  region     = "us-west-2"
-}
-
-##################################################################################
 # DATA
 ##################################################################################
 
-#data "aws_ssm_parameter" "ami" {
-#  name = "/amazon/amzn2-ami-kernel-5.10-hvm-2.0.20221004.0-arm64-gp2"
-#}
+variable "awsKey" {
+  description = "The AWS key"
+  type        = string
+}
+variable "awsSecret" {
+  description = "The AWS secret"
+  type        = string
+}
+
+variable "dockerPwd" {
+  description = "Docker repo password"
+  type        = string
+}
+
+variable "dockerUsername" {
+  description = "Docker repo username"
+  type        = string
+}
 
 data "aws_ami" "amazonLinux" {
   most_recent   = true
@@ -61,6 +66,16 @@ data "aws_eip" "web-eip" {
 resource "aws_key_pair" "keypair" {
   key_name   = "jakl-web-deploy"
   public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC9wK6Gu3vtPar0rQ+DeBVMrTxMo8sT++KYGj5NLUHhS3ckuELd5fgKm348lsBnyZk4eg/+CFO2vq1+dp9MvgORCA/FCUHOzHnm98pBTNrkQEMCV855JZUJdrFXApL7sbVkiDZWBN20MsoasLeKwb1Dqa+9W8QnmZKY6HkMio6GumdA1I6mEM531mexrarWm9WEe0Xr27+F7KeQOeDkCOYXduuEXfVMhurabTazNTBhLPb2mV+bWpwqLFGkHlcJTOPu+4YRGI+jpFurVw05QyJHZOaLSZqj1zUyTLI28tUlvQrltbEl5d0Ly8uTeatTIzCjIF0TIgTB52tLS7hoSetYKueN2YfWTjnhZix4VX+aJco6lvuvLQikwO9mDGgqjwvdajJVOkBFL+qgzVISkM4krvQYzR5MasCUAmG5QJaCfO7EARa9mTSCFXcma+nqYgQA+UNBT77xhi1hlAVwX+/oGPFg34CMHuN3fWC+n2wtnh5ENGL8kDRHfc1i4+rhK65paQ9vJZXo5BscTxJ/mQnupfI6ZKQdAi8hDTOEknZvFSZr7+JbuXL/4IX7vs+M1r71+WPLQpkBuRawm0xo0noQERsGW31bh1dhoqv7JpqnANbvd4s4+zOrDS96AZ8RMqPHs4Bq87TOEyPOS9PeLvBenyev7L5wlu4DZSnXjffOMw== austin@jerry.local"
+}
+
+##################################################################################
+# PROVIDERS
+##################################################################################
+
+provider "aws" {
+  access_key = var.awsKey #"AKIARJXCRRNHIIUEKSZ6"
+  secret_key = var.awsSecret #"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"
+  region     = "us-west-2"
 }
 
 ##################################################################################
