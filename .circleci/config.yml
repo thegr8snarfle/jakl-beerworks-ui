@@ -42,7 +42,7 @@ jobs:
       - run:
           name: terraform init
           command: |
-            echo "TF_VAR_awsKey =====> $TF_VAR_awsKey"
+            echo $TF_VAR_awsKey
             terraform init -backend-config="access_key=$AWS_ACCESS_KEY" -backend-config="secret_key=$AWS_SECRET"
       - terraform/validate:
           path: .
