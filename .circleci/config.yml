@@ -36,6 +36,7 @@ jobs:
         TF_VAR_dockerPwd: $DOCKER_LOGIN
         TF_VAR_dockerUname: $DOCKER_PASSWORD
         TF_VAR_awsKeypairHash: $JAKL_WEB_DEPLOY_KEY
+        TF_LOG: debug
     steps:
       - checkout
       - run:
