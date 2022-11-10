@@ -30,7 +30,7 @@ variable "dockerPwd" {
   sensitive   = true
 }
 
-variable "dockerUsername" {
+variable "dockerUname" {
   description = "Docker repo username"
   type        = string
   sensitive   = true
@@ -185,7 +185,7 @@ resource "aws_instance" "jakl-web-auto" {
   sudo amazon-linux-extras install docker
   sudo usermod -a -G docker ec2-user
   sudo service docker start
-  docker login --username $DOCKER_LOGIN --password $DOCKER_PASSWORD
+  docker login --username $dockerUname --password $dockerPwd
   docker pull aklaimd/jakl-ui:latest
   docker run -d -p 80:80 aklaimd/jakl-ui:latest
   EOF
