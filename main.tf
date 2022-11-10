@@ -15,21 +15,30 @@ terraform {
 
 variable "awsKey" {
   description = "The AWS key"
-  type        = string
+  type        = string,
+  sensitive   = true
 }
 variable "awsSecret" {
   description = "The AWS secret"
-  type        = string
+  type        = string,
+  sensitive   = true
 }
 
 variable "dockerPwd" {
   description = "Docker repo password"
-  type        = string
+  type        = string,
+  sensitive   = true
 }
 
 variable "dockerUsername" {
   description = "Docker repo username"
-  type        = string
+  type        = string,
+  sensitive   = true
+}
+
+variable "awsKeypairHash" {
+  description: "EC2 ssh key",
+  sensitive   = true
 }
 
 data "aws_ami" "amazonLinux" {
@@ -65,7 +74,7 @@ data "aws_eip" "web-eip" {
 
 resource "aws_key_pair" "keypair" {
   key_name   = "jakl-web-deploy"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC9wK6Gu3vtPar0rQ+DeBVMrTxMo8sT++KYGj5NLUHhS3ckuELd5fgKm348lsBnyZk4eg/+CFO2vq1+dp9MvgORCA/FCUHOzHnm98pBTNrkQEMCV855JZUJdrFXApL7sbVkiDZWBN20MsoasLeKwb1Dqa+9W8QnmZKY6HkMio6GumdA1I6mEM531mexrarWm9WEe0Xr27+F7KeQOeDkCOYXduuEXfVMhurabTazNTBhLPb2mV+bWpwqLFGkHlcJTOPu+4YRGI+jpFurVw05QyJHZOaLSZqj1zUyTLI28tUlvQrltbEl5d0Ly8uTeatTIzCjIF0TIgTB52tLS7hoSetYKueN2YfWTjnhZix4VX+aJco6lvuvLQikwO9mDGgqjwvdajJVOkBFL+qgzVISkM4krvQYzR5MasCUAmG5QJaCfO7EARa9mTSCFXcma+nqYgQA+UNBT77xhi1hlAVwX+/oGPFg34CMHuN3fWC+n2wtnh5ENGL8kDRHfc1i4+rhK65paQ9vJZXo5BscTxJ/mQnupfI6ZKQdAi8hDTOEknZvFSZr7+JbuXL/4IX7vs+M1r71+WPLQpkBuRawm0xo0noQERsGW31bh1dhoqv7JpqnANbvd4s4+zOrDS96AZ8RMqPHs4Bq87TOEyPOS9PeLvBenyev7L5wlu4DZSnXjffOMw== austin@jerry.local"
+  public_key = var.awsKeypairHash
 }
 
 ##################################################################################
@@ -73,8 +82,8 @@ resource "aws_key_pair" "keypair" {
 ##################################################################################
 
 provider "aws" {
-  access_key = var.awsKey #"AKIARJXCRRNHIIUEKSZ6"
-  secret_key = var.awsSecret #"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"
+  access_key = var.awsKey
+  secret_key = var.awsSecret
   region     = "us-west-2"
 }
 
@@ -169,9 +178,6 @@ resource "aws_instance" "jakl-web-auto" {
   tags = {
     Name = "jakl-web-auto"
   }
-  #  depends_on = [
-  #    aws_key_pair.keypair
-  #  ]
 
   user_data = <<EOF
   #! /bin/bash
@@ -179,7 +185,7 @@ resource "aws_instance" "jakl-web-auto" {
   sudo amazon-linux-extras install docker
   sudo usermod -a -G docker ec2-user
   sudo service docker start
-  docker login --username aklaimd --password Moople123#
+  docker login --username $DOCKER_LOGIN --password $DOCKER_PASSWORD
   docker pull aklaimd/jakl-ui:latest
   docker run -d -p 80:80 aklaimd/jakl-ui:latest
   EOF

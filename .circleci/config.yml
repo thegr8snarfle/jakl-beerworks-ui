@@ -34,7 +34,7 @@ jobs:
         TF_VAR_awsKey: $AWS_ACCESS_KEY
         TF_VAR_awsSecret: $AWS_ACCESS_KEY
         TF_VAR_dockerPwd: $DOCKER_LOGIN
-        TF_VAR_dockerUsername: $DOCKER_LOGIN
+        TF_VAR_dockerUsername: $DOCKER_PASSWORD
     steps:
       - checkout
       - run:
