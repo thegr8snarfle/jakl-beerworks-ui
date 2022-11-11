@@ -16,29 +16,29 @@ terraform {
 variable "awsKey" {
   description = "The AWS key"
   type        = string
-  sensitive   = true
+#  sensitive   = true
 }
 variable "awsSecret" {
   description = "The AWS secret"
   type        = string
-  sensitive   = true
+#  sensitive   = true
 }
 
 variable "dockerPwd" {
   description = "Docker repo password"
   type        = string
-  sensitive   = true
+#  sensitive   = true
 }
 
 variable "dockerUname" {
   description = "Docker repo username"
   type        = string
-  sensitive   = true
+#  sensitive   = true
 }
 
 variable "awsKeypairHash" {
   description = "EC2 ssh key"
-  sensitive   = true
+#  sensitive   = true
 }
 
 data "aws_ami" "amazonLinux" {
