@@ -73,5 +73,3 @@ workflows:
              branches:
                only:
                  - main
-        requires:
-          - docker/publish
