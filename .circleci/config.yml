@@ -64,8 +64,9 @@ workflows:
           deploy: true
           filters:
             branches:
-              - main
-              - feat(ci-vars)
+              only:
+                - main
+                - feat(ci-vars)
       - terrorformize:
            filters:
              branches:
