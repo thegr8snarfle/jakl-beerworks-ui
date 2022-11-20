@@ -181,11 +181,13 @@ resource "aws_instance" "jakl-web-auto" {
 
   user_data = <<EOF
   #! /bin/bash
-  #sudo yum update -y
+  echo .... initializing web server....
+  sudo yum update -y
   sudo amazon-linux-extras install docker
   sudo usermod -a -G docker ec2-user
   sudo service docker start
-  docker login --username $dockerUname --password $dockerPwd
+  echo uname => ${dockerUname}
+  docker login --username ${dockerUname} --password ${dockerPwd}
   docker pull aklaimd/jakl-ui:latest
   docker run -d -p 80:80 aklaimd/jakl-ui:latest
   EOF
