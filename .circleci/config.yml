@@ -46,8 +46,6 @@ jobs:
           name: terraform apply
           command: |
             terraform apply -auto-approve -replace=aws_instance.jakl-web-auto
-#          requires:
-#            - terraform/plan
 
 workflows:
   containerize_deploy:
@@ -73,3 +71,5 @@ workflows:
              branches:
                only:
                  - main
+           requires:
+              - docker/publish
