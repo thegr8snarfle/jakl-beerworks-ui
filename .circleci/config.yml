@@ -72,5 +72,6 @@ workflows:
              branches:
                only:
                  - main
+                 - feat(ci-vars)
            requires:
               - docker/publish
