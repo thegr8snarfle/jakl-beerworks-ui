@@ -59,13 +59,13 @@ const FoundersClubPage: NextPageWithLayout = () => {
         </Row>
         <Row className="mt-5 photos" xs={1} md={3}>
           <Col className="mb-3">
-            <Image src={cornfieldImage.src} width={750} height={560}/>
+            <Image alt="cornfield" src={cornfieldImage.src} width={750} height={560}/>
           </Col>
           <Col className="mb-3">
-            <Image src={lumbermillImage.src} width={750} height={560}/>
+            <Image alt="lumbermill" src={lumbermillImage.src} width={750} height={560}/>
           </Col>
           <Col className="mb-3">
-            <Image src={beerGardenImage.src} width={750} height={560}/>
+            <Image alt="beergarden" src={beerGardenImage.src} width={750} height={560}/>
           </Col>
         </Row>
         <Row className="mt-5">

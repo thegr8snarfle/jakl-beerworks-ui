@@ -462,8 +462,8 @@ export const SOCIAL_EVENTS: BreweryEvent[] = [
     type: 'social',
     name: 'Goat Yoga',
     description: `It's goat yoga, broh!`,
-    dateFrom: dateTime.toISODate(),
-    dateTo: dateTime.plus({'hours': 2}).toISODate(),
+    dateFrom: dateTime.toISODate()!,
+    dateTo: dateTime.plus({'hours': 2}).toISODate()!,
     img: null,
     canonicalSource: null
   },
@@ -472,8 +472,8 @@ export const SOCIAL_EVENTS: BreweryEvent[] = [
     type: 'social',
     name: 'Paint with Karen',
     description: `Come paint with Karen, she's awesome!`,
-    dateFrom: dateTime.plus({'weeks': 1}).toISODate(),
-    dateTo: dateTime.plus({'hours': 2}).toISODate(),
+    dateFrom: dateTime.plus({'weeks': 1}).toISODate()!,
+    dateTo: dateTime.plus({'hours': 2}).toISODate()!,
     img: null,
     canonicalSource: null
   },
@@ -482,8 +482,8 @@ export const SOCIAL_EVENTS: BreweryEvent[] = [
     type: 'social',
     name: 'A really, really, long title',
     description: `A really, really long description!A really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long description`,
-    dateFrom: dateTime.plus({'weeks': 2}).toISODate(),
-    dateTo: dateTime.plus({'hours': 2}).toISODate(),
+    dateFrom: dateTime.plus({'weeks': 2}).toISODate()!,
+    dateTo: dateTime.plus({'hours': 2}).toISODate()!,
     img: null,
     canonicalSource: null
   },
@@ -492,8 +492,8 @@ export const SOCIAL_EVENTS: BreweryEvent[] = [
     type: 'social',
     name: 'Guns and Beer',
     description: `It's guns and beer, broh! We'll also be watching fox news and brainstorming ways to own the libs!`,
-    dateFrom: dateTime.plus({'weeks': 3}).toISODate(),
-    dateTo: dateTime.plus({'hours': 2}).toISODate(),
+    dateFrom: dateTime.plus({'weeks': 3}).toISODate()!,
+    dateTo: dateTime.plus({'hours': 2}).toISODate()!,
     img: null,
     canonicalSource: null
   }
@@ -505,8 +505,8 @@ export const FOOD_EVENTS: BreweryEvent[] = [
     type: 'food',
     name: `California Tacos`,
     description: `Tacooooooooooossssssss!`,
-    dateFrom: dateTime.toISODate(),
-    dateTo: dateTime.plus({'hours': 5}).toISODate(),
+    dateFrom: dateTime.toISODate()!,
+    dateTo: dateTime.plus({'hours': 5}).toISODate()!,
     img: null,
     canonicalSource: null
   },
@@ -515,8 +515,8 @@ export const FOOD_EVENTS: BreweryEvent[] = [
     type: 'food',
     name: `Gerry's Gyros`,
     description: `Greek food by Gerry.`,
-    dateFrom: dateTime.plus({'weeks': 1}).toISODate(),
-    dateTo: dateTime.plus({'hours': 3}).toISODate(),
+    dateFrom: dateTime.plus({'weeks': 1}).toISODate()!,
+    dateTo: dateTime.plus({'hours': 3}).toISODate()!,
     img: null,
     canonicalSource: null
   },
@@ -525,8 +525,8 @@ export const FOOD_EVENTS: BreweryEvent[] = [
     type: 'food',
     name: `Rollin' Doughlo Pizza`,
     description: `A really, really long description!A really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long descriptionA really, really long description`,
-    dateFrom: dateTime.plus({'weeks': 2}).toISODate(),
-    dateTo: dateTime.plus({'hours': 5}).toISODate(),
+    dateFrom: dateTime.plus({'weeks': 2}).toISODate()!,
+    dateTo: dateTime.plus({'hours': 5}).toISODate()!,
     img: null,
     canonicalSource: null
   },
@@ -535,8 +535,8 @@ export const FOOD_EVENTS: BreweryEvent[] = [
     type: 'food',
     name: `Chuey Fu's Asian Fusion`,
     description: `Latin-Asian fusion - it's amazing`,
-    dateFrom: dateTime.plus({'weeks': 3}).toISODate(),
-    dateTo: dateTime.plus({'hours': 3}).toISODate(),
+    dateFrom: dateTime.plus({'weeks': 3}).toISODate()!,
+    dateTo: dateTime.plus({'hours': 3}).toISODate()!,
     img: null,
     canonicalSource: null
   }
