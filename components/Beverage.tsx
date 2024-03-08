@@ -8,7 +8,7 @@ const Beverage: React.FC<{ bevvy: MenuItem }> = ({ bevvy }) => {
   return (
   <Row xs={1} md={2} className="align-items-center my-2">
     <Col className="d-none d-md-block text-center align-middle">
-      <Image height={270} width={270} className="d-none py-2 px-4 px-sm-1 bg-transparent w-100 d-md-block" src={beer.src}/>
+      <Image alt="beer" height={270} width={270} className="d-none py-2 px-4 px-sm-1 bg-transparent w-100 d-md-block" src={beer.src}/>
     </Col>
     <Col>
       <div className="stats">

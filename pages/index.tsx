@@ -27,16 +27,16 @@ const Home: NextPageWithLayout = () => {
           <Col className="align-items-center d-block">
             <Carousel className="w-100" fade={true} pause="hover" interval={7500}>
               <Carousel.Item className="text-center">
-                <Image height={600} width={600} src={images['first'].src}/>
+                <Image alt="first" height={600} width={600} src={images['first'].src}/>
               </Carousel.Item>
               <Carousel.Item className="text-center">
-                <Image height={600} width={600} src={images['second'].src} />
+                <Image alt="second" height={600} width={600} src={images['second'].src} />
               </Carousel.Item>
               <Carousel.Item className="text-center">
-                <Image height={600} width={600} src={images['third'].src} />
+                <Image alt="third" height={600} width={600} src={images['third'].src} />
               </Carousel.Item>
               <Carousel.Item className="text-center">
-                <Image height={600} width={600} src={images['fourth'].src} />
+                <Image alt="fourth" height={600} width={600} src={images['fourth'].src} />
               </Carousel.Item>
             </Carousel>
           </Col>
