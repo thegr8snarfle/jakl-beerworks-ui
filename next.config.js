@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
-    untappedAPIToken: '4aGvUsf-HHsKKKLwC-G6',
-    mapboxAPIToken: 'pk.eyJ1IjoiamFrbGJlZXJ3b3JrcyIsImEiOiJjbGE2OGwyY2swa3V5M29ydmkyOWU1c3p2In0.4HxMcOGCT6u9P1vNm5NTTQ',
+    untappedAPIToken: '',
+    mapboxAPIToken: '',
     environment: 'local',
     port: 80
   },
